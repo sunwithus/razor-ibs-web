@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "InterBase Connection";
+}
+
+<div class="text-center">
+    <h1>InterBase Connection Status</h1>
+
+    <div style="color:blue; font-weight:bold; font-size:20px; margin-bottom:20px;"> 
+        <p>@Model.Message</p>
+    </div>
+
+    <form method="post">
+        <div>
+        <label>User:</label>
+        <input type="text" name="User" value="@Model.InterbaseConnection.User">
+
+        <label>Password:</label>
+        <input type="text" name="Password" value="@Model.InterbaseConnection.Password">
+
+        <label>Database:</label>
+        <input type="text" name="Database" value="@Model.InterbaseConnection.Database">
+        </div>
+ 
+        <button type="submit">Сохранить</button>
+    </form>
+</div>
